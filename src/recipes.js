@@ -24,7 +24,7 @@ async function main() {
     el.map((link) => link.href)
   );
 
-  const linksTeste = links.slice(0, 11);
+  const linksTeste = links.slice(0, 2);
 
   for (const link of linksTeste) {
     // Acessando varias paginas dinâmicamente
@@ -38,12 +38,17 @@ async function main() {
       const name = document.querySelector(".title > h1")?.innerText;
       const portion = document.querySelectorAll(".align-middle")[0]?.innerText;
       const timer = document.querySelectorAll(".align-middle")[1]?.innerText;
+      // TODO aplicar logica para pegar todos os ingredientes
+      const ingredients = document.querySelectorAll(
+        ".ingredientes > ul > li > label"
+      )[0]?.innerText;
 
       return {
         urlImage,
         name,
         portion,
         timer,
+        ingredients,
       };
     });
 
