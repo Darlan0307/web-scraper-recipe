@@ -15,9 +15,7 @@ app.get("/data", async (req, res) => {
   const { indexStart, indexEnd } = req.query;
 
   try {
-    // TODO resolver error do browser is not defined
     const response = await FetchDataRecipe(indexStart, indexEnd);
-    console.log(response);
     res.status(200).json({ dataRecipe: response });
   } catch (error) {
     console.log(error);

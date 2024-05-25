@@ -2,17 +2,22 @@ import puppeteer from "puppeteer";
 
 const url = "https://www.receiteria.com.br/receitas-de-jantar-simples/";
 
-export async function main(indexStart, indexEnd) {
+let browser;
+
+async function initBrowser() {
+  browser = await puppeteer.launch({
+    headless: true,
+    devtools: false,
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+  });
+}
+
+initBrowser();
+
+export async function FetchDataRecipe(indexStart, indexEnd) {
   try {
     // constante das receitas
     const dataRecipes = [];
-
-    // Criando uma instância do chrome
-    const browser = await puppeteer.launch({
-      headless: true,
-      devtools: false,
-      args: ["--no-sandbox", "--disable-setuid-sandbox"],
-    });
 
     // Criando uma pagina
     const page = await browser.newPage();
@@ -73,7 +78,6 @@ export async function main(indexStart, indexEnd) {
   } catch (error) {
     return error;
   } finally {
-    // Fechando o chrome para evitar vazamento de memória
     await browser.close();
   }
 }
