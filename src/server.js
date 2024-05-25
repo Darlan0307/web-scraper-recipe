@@ -12,11 +12,12 @@ app.get("/", (_, res) => {
 });
 
 app.get("/data", async (req, res) => {
-  const { indexStart, indexEnd } = req.query;
+  const { indexPage } = req.query;
 
   try {
-    const response = await FetchDataRecipe(indexStart, indexEnd);
-    res.status(200).json({ dataRecipe: response });
+    const { qtdLinks, dataPage } = await FetchDataRecipe(indexPage);
+
+    res.status(200).json({ dataPage, qtdLinks });
   } catch (error) {
     console.log(error);
     res.status(401).json(error);

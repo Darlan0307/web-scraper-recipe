@@ -12,10 +12,9 @@ async function initBrowser() {
   });
 }
 
-initBrowser();
-
-export async function FetchDataRecipe(indexStart, indexEnd) {
+export async function FetchDataRecipe(indexPage) {
   try {
+    await initBrowser();
     // constante das receitas
     const dataRecipes = [];
 
@@ -30,7 +29,10 @@ export async function FetchDataRecipe(indexStart, indexEnd) {
       el.map((link) => link.href)
     );
 
-    const linksTeste = links.slice(indexStart, indexEnd);
+    const start = (indexPage - 1) * 10;
+    const end = indexPage * 10;
+
+    const linksTeste = links.slice(start, end);
 
     for (const link of linksTeste) {
       // Acessando varias paginas dinâmicamente
@@ -74,7 +76,10 @@ export async function FetchDataRecipe(indexStart, indexEnd) {
       dataRecipes.push(newRecipe);
     }
 
-    return dataRecipes;
+    return {
+      qtdLinks: links.length,
+      dataPage: dataRecipes,
+    };
   } catch (error) {
     return error;
   } finally {
