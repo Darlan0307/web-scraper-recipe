@@ -82,8 +82,6 @@ export async function FetchDataRecipe(indexPage) {
       dataPage: dataRecipes,
     };
   } catch (error) {
-    return error;
-  } finally {
-    await browser.close();
+    console.log(error);
   }
 }
