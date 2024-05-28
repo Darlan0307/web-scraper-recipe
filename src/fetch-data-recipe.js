@@ -66,6 +66,7 @@ export async function FetchDataRecipe(indexPage) {
         return {
           urlImage,
           name,
+          category: "jantar",
           portion,
           timer,
           ingredients,
