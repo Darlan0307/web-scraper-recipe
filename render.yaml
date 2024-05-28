@@ -1,2 +1,0 @@
-env:
-  - CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium

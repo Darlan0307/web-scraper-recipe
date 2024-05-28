@@ -1,4 +1,6 @@
 import puppeteer from "puppeteer";
+import dotenv from "dotenv";
+dotenv.config();
 
 const url = "https://www.receiteria.com.br/receitas-de-jantar-simples/";
 
@@ -8,8 +10,16 @@ async function initBrowser() {
   browser = await puppeteer.launch({
     headless: true,
     devtools: false,
-    args: ["--no-sandbox", "--disable-setuid-sandbox"],
-    executablePath: process.env.CHROMIUM_EXECUTABLE_PATH,
+    args: [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--single-process",
+      "--no-zygote",
+    ],
+    executablePath:
+      process.env.NODE_ENV === "production"
+        ? process.env.PUPPETEER_EXECUTABLE_PATH
+        : puppeteer.executablePath(),
   });
 }
 
@@ -84,5 +94,7 @@ export async function FetchDataRecipe(indexPage) {
     };
   } catch (error) {
     console.log(error);
+  } finally {
+    await browser.close();
   }
 }
