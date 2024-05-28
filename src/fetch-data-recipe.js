@@ -9,6 +9,7 @@ async function initBrowser() {
     headless: true,
     devtools: false,
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
+    executablePath: process.env.CHROMIUM_EXECUTABLE_PATH,
   });
 }
 
