@@ -7,20 +7,23 @@ const url = "https://www.receiteria.com.br/receitas-de-jantar-simples/";
 let browser;
 
 async function initBrowser() {
-  browser = await puppeteer.launch({
-    headless: true,
-    devtools: false,
-    args: [
-      "--no-sandbox",
-      "--disable-setuid-sandbox",
-      "--single-process",
-      "--no-zygote",
-    ],
-    executablePath:
-      process.env.NODE_ENV === "production"
-        ? process.env.PUPPETEER_EXECUTABLE_PATH
-        : puppeteer.executablePath(),
-  });
+  if (!browser) {
+    browser = await puppeteer.launch({
+      headless: true,
+      devtools: false,
+      args: [
+        "--no-sandbox",
+        "--disable-setuid-sandbox",
+        "--single-process",
+        "--no-zygote",
+      ],
+      executablePath:
+        process.env.NODE_ENV === "production"
+          ? process.env.PUPPETEER_EXECUTABLE_PATH
+          : puppeteer.executablePath(),
+    });
+    return browser;
+  }
 }
 
 export async function FetchDataRecipe(indexPage) {
@@ -33,7 +36,7 @@ export async function FetchDataRecipe(indexPage) {
     const page = await browser.newPage();
 
     // Acessando a pagina das receitas
-    await page.goto(url, { waitUntil: "networkidle2", timeout: 200000 });
+    await page.goto(url, { waitUntil: "networkidle2", timeout: 300000 });
 
     // Selecionando apenas os links dos cards de cada receita
     const links = await page.$$eval(".shadow-sm", (el) =>
@@ -47,8 +50,8 @@ export async function FetchDataRecipe(indexPage) {
 
     for (const link of linksTeste) {
       // Acessando varias paginas dinâmicamente
-      await page.goto(link, { waitUntil: "networkidle2", timeout: 200000 });
-
+      await page.goto(link, { waitUntil: "load", timeout: 300000 });
+      await page.waitForLoadState("networkidle2");
       // Para cada pagina criar um objeto com as informações necessárias
       const newRecipe = await page.evaluate(() => {
         const urlImage = document
@@ -93,7 +96,7 @@ export async function FetchDataRecipe(indexPage) {
       dataPage: dataRecipes,
     };
   } catch (error) {
-    console.log(error);
+    throw error;
   } finally {
     await browser.close();
   }
