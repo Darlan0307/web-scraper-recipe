@@ -51,8 +51,8 @@ export async function FetchDataRecipe(indexPage) {
     for (const link of linksTeste) {
       // Acessando varias paginas dinâmicamente
       await page.goto(link, { waitUntil: "load", timeout: 300000 });
-      await page.waitForLoadState("networkidle2");
       // Para cada pagina criar um objeto com as informações necessárias
+      await page.waitForNavigation({ waitUntil: "networkidle2" });
       const newRecipe = await page.evaluate(() => {
         const urlImage = document
           .querySelector(".superimg > img")
@@ -97,7 +97,5 @@ export async function FetchDataRecipe(indexPage) {
     };
   } catch (error) {
     throw error;
-  } finally {
-    await browser.close();
   }
 }
