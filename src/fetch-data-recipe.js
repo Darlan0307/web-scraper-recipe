@@ -36,21 +36,21 @@ export async function FetchDataRecipe(indexPage) {
     const page = await browser.newPage();
 
     // Acessando a pagina das receitas
-    await page.goto(url, { waitUntil: "networkidle2", timeout: 300000 });
+    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 600000 });
 
     // Selecionando apenas os links dos cards de cada receita
     const links = await page.$$eval(".shadow-sm", (el) =>
       el.map((link) => link.href)
     );
 
-    const start = (indexPage - 1) * 10;
-    const end = indexPage * 10;
+    const start = (indexPage - 1) * 5;
+    const end = indexPage * 5;
 
     const linksTeste = links.slice(start, end);
 
     for (const link of linksTeste) {
       // Acessando varias paginas dinâmicamente
-      await page.goto(link, { waitUntil: "load", timeout: 300000 });
+      await page.goto(link, { waitUntil: "domcontentloaded", timeout: 600000 });
       // Para cada pagina criar um objeto com as informações necessárias
       await page.waitForNavigation({ waitUntil: "networkidle2" });
       const newRecipe = await page.evaluate(() => {
