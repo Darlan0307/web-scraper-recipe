@@ -1,5 +1,6 @@
 import puppeteer from "puppeteer";
 import dotenv from "dotenv";
+import fs from "fs";
 dotenv.config();
 
 const url = "https://www.receiteria.com.br/receitas-de-jantar-simples/";
@@ -7,24 +8,11 @@ const url = "https://www.receiteria.com.br/receitas-de-jantar-simples/";
 let browser;
 
 async function initBrowser() {
-  if (!browser) {
-    browser = await puppeteer.launch({
-      headless: true,
-      devtools: false,
-      args: [
-        "--no-sandbox",
-        "--disable-setuid-sandbox",
-        "--single-process",
-        "--no-zygote",
-      ],
-      executablePath:
-        process.env.NODE_ENV === "production"
-          ? process.env.PUPPETEER_EXECUTABLE_PATH
-          : puppeteer.executablePath(),
-      defaultNavigationTimeout: 300000,
-    });
-    return browser;
-  }
+  browser = await puppeteer.launch({
+    headless: true,
+    devtools: false,
+  });
+  return browser;
 }
 
 export async function FetchDataRecipe(indexPage) {
@@ -37,25 +25,22 @@ export async function FetchDataRecipe(indexPage) {
     const page = await browser.newPage();
 
     // Acessando a pagina das receitas
-    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 300000 });
+    await page.goto(url, { timeout: 100000 });
 
     // Selecionando apenas os links dos cards de cada receita
     const links = await page.$$eval(".shadow-sm", (el) =>
       el.map((link) => link.href)
     );
 
-    const start = (indexPage - 2) * 5;
-    const end = indexPage * 5;
+    const start = (indexPage - 1) * 10;
+    const end = indexPage * 10;
 
-    console.log(start + end);
-
-    const linksTeste = links.slice(0, 1);
+    const linksTeste = links.slice(start, end);
 
     for (const link of linksTeste) {
       // Acessando varias paginas dinâmicamente
-      await page.goto(link, { waitUntil: "domcontentloaded", timeout: 300000 });
-      await page.waitForNavigation({ waitUntil: "networkidle2" });
-      await page.waitForTimeout(5000); // adicione uma espera adicional de 5 segundos
+      await page.goto(link, { timeout: 100000 });
+      // await page.waitForNavigation({ waitUntil: "networkidle2" });
       const newRecipe = await page.evaluate(() => {
         const urlImage = document
           .querySelector(".superimg > img")
@@ -93,12 +78,15 @@ export async function FetchDataRecipe(indexPage) {
 
       dataRecipes.push(newRecipe);
     }
+    // Criar arquivo json com os dados
+    const dadosJson = JSON.stringify(dataRecipes);
 
-    return {
-      qtdLinks: links.length,
-      dataPage: dataRecipes,
-    };
+    fs.writeFileSync(`data-json/dados${indexPage}.json`, dadosJson);
   } catch (error) {
-    throw error;
+    console.log(error);
+  } finally {
+    await browser.close();
   }
 }
+
+FetchDataRecipe(1);
