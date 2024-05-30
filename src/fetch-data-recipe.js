@@ -89,4 +89,4 @@ export async function FetchDataRecipe(indexPage) {
   }
 }
 
-FetchDataRecipe(1);
+FetchDataRecipe(10);

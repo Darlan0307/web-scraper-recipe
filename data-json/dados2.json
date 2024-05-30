@@ -1,0 +1,254 @@
+[
+  {
+    "urlImage": "https://www.receiteria.com.br/wp-content/uploads/carne-de-panela-0.png",
+    "name": "Carne de panela desfiada",
+    "category": "jantar",
+    "portion": "10 porções",
+    "timer": "45min",
+    "ingredients": [
+      "2 kg de coxão mole",
+      "Azeite a gosto",
+      "Sal e pimenta-do-reino a gosto",
+      "2 cebolas picadas",
+      "4 dentes de alho picados",
+      "1 talo de salsão picado (sem as folhas)",
+      "1 cenoura ralada",
+      "2 latas de tomates pelados em cubos",
+      "½ xícara de chá de vinho tinto",
+      "3 folhas de louro",
+      "1 xícara de chá de água fervente"
+    ],
+    "preparations": [
+      "Reúna todos os ingredientes;",
+      "Corte a carne em cubos de cerca de 7 cm e reserve;",
+      "Em uma panela de pressão grande, regue com azeite e deixe esquentar;",
+      "Sele os cubos de carne e vá temperando com sal e pimenta durante o processo;",
+      "Após dourar todos os cubos de carne, reserve;",
+      "Na panela de pressão, adicione mais azeite e refogue a cebola até murchar;",
+      "Tempere com sal, acrescente o alho, o salsão, a cenoura e refogue também;",
+      "Coloque o tomate pelado e misture bem;",
+      "Despeje o vinho, coloque as folhas de louro, 1 colher de chá de sal e misture até começar a ferver;",
+      "Volte a carne para a panela, adicione a água fervente, tampe a panela, deixe no fogo alto e assim que começar a pegar pressão, conte 30 minutos;",
+      "Transfira tudo para um recipiente e desfie a carne;",
+      "Agora é só servir."
+    ]
+  },
+  {
+    "urlImage": "https://www.receiteria.com.br/wp-content/uploads/galinhada-facil-10-rotated.jpg",
+    "name": "Galinhada fácil",
+    "category": "jantar",
+    "portion": "5 porções",
+    "timer": "60min",
+    "ingredients": [
+      "700 gramas de galinha picada",
+      "2 xícaras de chá de arroz",
+      "4 xícaras de chá de água",
+      "1 colher de sopa de óleo ou azeite",
+      "1 colher de sopa de alho triturado",
+      "1 pimentão verde grande picado",
+      "1 cebola grande picada",
+      "1 tomate grande picado",
+      "1 cenoura picada",
+      "1 lata de milho",
+      "1 punhado de coentro"
+    ],
+    "preparations": [
+      "Pique a galinha e organize todos os ingredientes que você utilizará na receita;",
+      "Tempere a galinha a gosto, com os temperos que preferir. Utilizamos sal, pimenta-do-reino, colorau, alho, vinagre e chimichurri. Deixe marinando por, pelo menos, 30 minutos;",
+      "Em uma panela grande, aqueça o óleo, coloque a galinha e deixe fritar bem, aproximadamente 5 minutos em fogo médio. De vez em quando, mexa para não grudar no fundo da panela;",
+      "Em seguida, coloque o pimentão, a cebola, o tomate e o alho. Mexa bem e espere o pimentão começar a murchar, em torno de 2 minutos;",
+      "Acrescente a cenoura, o milho e o coentro. Misture bem e refogue por mais 1 minuto;",
+      "Despeje o arroz, mexa e refogue rapidamente para acentuar o sabor;",
+      "Por fim, acrescente a água, ajuste os temperos e o sal;",
+      "Com a panela semitampada, deixe a galinhada cozinhar, em fogo baixo, por 15 minutos, ou até que o arroz fique macio;",
+      "Quando atingir o ponto ideal, desligue o fogo. Se preferir, finalize com cheiro-verde e sirva a galinhada bem quentinha."
+    ]
+  },
+  {
+    "urlImage": "https://www.receiteria.com.br/wp-content/uploads/arroz-basmati.jpeg",
+    "name": "Arroz basmati",
+    "category": "jantar",
+    "portion": "4 porções",
+    "timer": "30min",
+    "ingredients": [
+      "1 xícara de chá de arroz basmati (200 gramas)",
+      "1 e 1/2 xícara de chá de água (250 ml)",
+      "1/2 colher de chá de sal (ou a gosto)"
+    ],
+    "preparations": [
+      "Separe os ingredientes para fazer o arroz basmati. Você pode aromatizar com cardamomo, pimenta, curry, canela ou cravo - coloque o tempero na hora que for ferver a água;",
+      "Com o auxílio de uma peneira, lave o arroz em água corrente até que a água fique transparente (cerca de 3 a 5 vezes). Depois, deixe o arroz basmati de molho por cerca de 30 minutos - isso diminui o tempo de cozimento, deixando o arroz mais aromático;",
+      "Passado o tempo, escorra o arroz. Em uma panela, coloque a água e leve ao fogo alto. Assim que ferver, adicione o arroz escorrido, tempere com sal e misture. Coloque no fogo baixo e deixe cozinhar por cerca de 12 minutos - por conta do demolho, o tempo de cozimento é rápido;",
+      "Depois, verifique se o arroz absorveu toda a água - utilize um garfo para afastar alguns grãos e veja o fundo da panela, se ainda tiver água, deixe mais alguns minutos até secar. Caso o arroz já esteja cozido, você também pode coar os grãos em uma peneira para não passar do ponto;",
+      "Desligue o fogo e deixe o arroz descansar por mais 5 a 10 minutos. Solte os grãos com um garfo e sirva a seguir. Bom apetite!"
+    ]
+  },
+  {
+    "urlImage": "https://www.receiteria.com.br/wp-content/uploads/pizza-rapida-de-micro-ondas-08.jpg",
+    "name": "Pizza rápida de micro-ondas",
+    "category": "jantar",
+    "portion": "6 porções",
+    "timer": "30min",
+    "ingredients": [
+      "1 ovo",
+      "1 colher de chá de sal",
+      "1 colher de chá de açúcar",
+      "2 colheres de sopa de óleo",
+      "½ xícara de chá de leite integral",
+      "1 xícara de chá de farinha de trigo",
+      "1 colher rasa de sopa de fermento em pó",
+      "Molho de tomate a gosto",
+      "6 fatias de presunto",
+      "6 fatias de mussarela",
+      "Calabresa em rodelas a gosto",
+      "Orégano a gosto"
+    ],
+    "preparations": [
+      "Reúna todos os ingredientes;",
+      "Em um vasilha, coloque o ovo, o sal, o açúcar, o óleo, o leite, a farinha de trigo e misture até atingir uma massa homogênea;",
+      "Adicione o fermento em pó e mexa delicadamente;",
+      "Espalhe a massa em um prato de micro-ondas devidamente higienizado;",
+      "Leve-o ao micro-ondas por cerca de 4 minutos;",
+      "Espalhe o molho de tomate sobre a massa;",
+      "À sua maneira, acrescente o presunto, a mussarela, a calabresa e o orégano;",
+      "Leve ao micro-ondas por cerca de 2 minutos e depois sua pizza estará pronta!"
+    ]
+  },
+  {
+    "category": "jantar",
+    "portion": "4 porções",
+    "timer": "30min",
+    "ingredients": [
+      "200 gramas de peito de frango",
+      "Sal a gosto",
+      "Pimenta do reino a gosto",
+      "1 dente de alho picado",
+      "1 limão",
+      "1 copo de requeijão cremoso",
+      "100 gramas de muçarela em cubinhos",
+      "4 batatas grandes"
+    ],
+    "preparations": []
+  },
+  {
+    "urlImage": "https://www.receiteria.com.br/wp-content/uploads/cuscuz-recheado-de-micro-ondas-0.png",
+    "name": "Cuscuz recheado de micro-ondas",
+    "category": "jantar",
+    "portion": "2 porções",
+    "timer": "10min",
+    "ingredients": [
+      "Manteiga a gosto",
+      "Azeite a gosto",
+      "½ cebola (cortada em lâminas)",
+      "200 gramas de carne-seca",
+      "Sal e pimenta-do-reino a gosto",
+      "Salsinha a gosto",
+      "1/2 xícara de flocão de milho",
+      "1/3 de xícara de água",
+      "1 pitada de sal",
+      "Requeijão a gosto (para rechear)"
+    ],
+    "preparations": [
+      "Reúna os ingredientes para a carne-seca;",
+      "Em uma frigideira, derreta a manteiga com o azeite e refogue a cebola;",
+      "Adicione a carne, o sal, a pimenta, a salsinha misture e deixe cozinhar. Reserve.",
+      "Reúna os ingredientes para o cuzcuz;",
+      "Em um recipiente, coloque o flocão, a água, o sal, misture bem e deixe hidratar por cerca de 10 minutos;",
+      "Unte uma tigela pequena com manteiga e forre o fundo com metade do cuscuz;",
+      "Recheie com a carne seca, requeijão e coloque o restante da massa por cima;",
+      "Cubra a tigela com um plástico filme, faça furinhos nele e leve ao micro-ondas por cerca de 3 minutos;",
+      "Desenforme e sirva."
+    ]
+  },
+  {
+    "urlImage": "https://www.receiteria.com.br/wp-content/uploads/macarrao-pizza-de-micro-ondas-1-730x548.jpg",
+    "name": "Macarrão pizza de micro-ondas",
+    "category": "jantar",
+    "portion": "3 porções",
+    "timer": "25min",
+    "ingredients": [
+      "250 gramas de macarrão parafuso",
+      "800 ml de água fervente",
+      "Sal a gosto",
+      "340 gramas de molho de tomate pronto",
+      "200 gramas de requeijão cremoso",
+      "1 calabresa defumada cortada em cubinhos e frita",
+      "250 gramas de queijo mussarela ralada",
+      "Queijo parmesão ralado a gosto",
+      "1 tomate cortado em rodelas",
+      "Orégano a gosto"
+    ],
+    "preparations": []
+  },
+  {
+    "category": "jantar",
+    "portion": "1 porção",
+    "timer": "5min",
+    "ingredients": [
+      "1 xícara de chá de macarrão (de sua preferência)",
+      "1 xícara de chá de água",
+      "1 pitada de sal",
+      "Queijo mussarela á gosto",
+      "Pimenta-do-reino á gosto",
+      "2 colheres de sopa de requeijão",
+      "Cerca de 100ml de leite"
+    ],
+    "preparations": []
+  },
+  {
+    "urlImage": "https://www.receiteria.com.br/wp-content/uploads/salada-de-bacalhau-capa.jpeg",
+    "name": "Salada de bacalhau simples",
+    "category": "jantar",
+    "portion": "6 a 8 porç.",
+    "timer": "40min",
+    "ingredients": [
+      "2 unidades de lombo de bacalhau (600 gramas)",
+      "2 cebolas grandes em rodelas",
+      "1 cabeça de alho cortado em lâminas",
+      "15 unidades de ovos de codorna cozidos (ou a gosto)",
+      "140 gramas de tomate-cereja (ou a gosto)",
+      "1/2 xícara de chá de azeitonas pretas sem caroço (ou a gosto)",
+      "1/2 xícara de chá de azeite (120 ml)",
+      "1/3 xícara de chá de salsinha (ou a gosto)",
+      "1 colher de café de pimenta (ou a gosto)",
+      "1 colher de café de sal (ou a gosto)"
+    ],
+    "preparations": [
+      "Reúna todos os ingredientes da sua salada de bacalhau simples;",
+      "Descongele o bacalhau e, em uma panela com água, ferva ele por 5 minutos;",
+      "Deixe esfriar e, com cuidado, retire as espinhas e a pele. Reserve;",
+      "Regue um refratário com azeite e faça uma camada de rodelas de cebola e alho;",
+      "Acrescente o bacalhau e leve ao forno preaquecido a 180ºC por cerca de 20 a 30 minutos;",
+      "Sem tirar do refratário, desfie o bacalhau;",
+      "Acrescente os ovos de codorna, o tomate-cereja, as azeitonas e tempere com sal, pimenta e salsinha. Misture levemente e sirva. Bom apetite!"
+    ]
+  },
+  {
+    "urlImage": "https://www.receiteria.com.br/wp-content/uploads/salada-de-batata-alema.jpeg",
+    "name": "Salada de batata alemã",
+    "category": "jantar",
+    "portion": "5 porções",
+    "timer": "30min",
+    "ingredients": [
+      "800 gramas de batata bolinha",
+      "2 colheres de chá de sal",
+      "100 gramas de bacon picado",
+      "1/4 de cebola roxa cortada em tiras",
+      "1/3 de xícara de chá de vinagre",
+      "1 colher de sopa de açúcar",
+      "1/4 de xícara de chá de óleo",
+      "Salsinha e cebolinha a gosto"
+    ],
+    "preparations": [
+      "Reúna todos os ingredientes;",
+      "Em uma panela, coloque as batatas e cubra com água fria;",
+      "Adicione o sal e, em seguida, leve para ferver. Cozinhe até ficarem macias, mas ligeiramente firmes por dentro;",
+      "Em uma frigideira, coloque o bacon picadinho e deixe dourar;",
+      "Acrescente a cebola e cozinhe por cerca de 2 minutos;",
+      "Junte o vinagre, o açúcar e leve para ferver em fogo médio para caramelizar;",
+      "Adicione o óleo e cozinhe por aproximadamente 2 minutos. Depois, coloque as batatas escorridas e cortadas em fatias de 1 ou 2 cm de espessura;",
+      "Misture delicadamente e finalize com a salsinha e cebolinha por cima;",
+      "Agora é só servir. Bom apetite!"
+    ]
+  }
+]
