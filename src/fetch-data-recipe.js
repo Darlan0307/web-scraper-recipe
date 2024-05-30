@@ -21,6 +21,7 @@ async function initBrowser() {
         process.env.NODE_ENV === "production"
           ? process.env.PUPPETEER_EXECUTABLE_PATH
           : puppeteer.executablePath(),
+      defaultNavigationTimeout: 300000,
     });
     return browser;
   }
@@ -36,7 +37,7 @@ export async function FetchDataRecipe(indexPage) {
     const page = await browser.newPage();
 
     // Acessando a pagina das receitas
-    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 200000 });
+    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 300000 });
 
     // Selecionando apenas os links dos cards de cada receita
     const links = await page.$$eval(".shadow-sm", (el) =>
@@ -52,9 +53,9 @@ export async function FetchDataRecipe(indexPage) {
 
     for (const link of linksTeste) {
       // Acessando varias paginas dinâmicamente
-      await page.goto(link, { waitUntil: "domcontentloaded", timeout: 200000 });
-      // Para cada pagina criar um objeto com as informações necessárias
+      await page.goto(link, { waitUntil: "domcontentloaded", timeout: 300000 });
       await page.waitForNavigation({ waitUntil: "networkidle2" });
+      await page.waitForTimeout(5000); // adicione uma espera adicional de 5 segundos
       const newRecipe = await page.evaluate(() => {
         const urlImage = document
           .querySelector(".superimg > img")
