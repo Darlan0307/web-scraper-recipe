@@ -11,6 +11,8 @@ async function initBrowser() {
   browser = await puppeteer.launch({
     headless: true,
     devtools: false,
+    executablePath: process.env.CHROME_BIN || null,
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
   });
   return browser;
 }
