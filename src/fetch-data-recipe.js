@@ -1,6 +1,6 @@
 import puppeteer from "puppeteer";
 import dotenv from "dotenv";
-import fs from "fs";
+// import fs from "fs";
 dotenv.config();
 
 const url = "https://www.receiteria.com.br/receitas-de-jantar-simples/";
@@ -35,7 +35,8 @@ export async function FetchDataRecipe(indexPage) {
     const start = (indexPage - 1) * 10;
     const end = indexPage * 10;
 
-    const linksTeste = links.slice(start, end);
+    // const linksTeste = links.slice(start, end);
+    const linksTeste = links.slice(0, 2);
 
     for (const link of linksTeste) {
       // Acessando varias paginas dinâmicamente
@@ -79,14 +80,13 @@ export async function FetchDataRecipe(indexPage) {
       dataRecipes.push(newRecipe);
     }
     // Criar arquivo json com os dados
-    const dadosJson = JSON.stringify(dataRecipes);
+    // const dadosJson = JSON.stringify(dataRecipes);
+    return dataRecipes;
 
-    fs.writeFileSync(`data-json/dados${indexPage}.json`, dadosJson);
+    // fs.writeFileSync(`data-json/dados${indexPage}.json`, dadosJson);
   } catch (error) {
     console.log(error);
   } finally {
     await browser.close();
   }
 }
-
-FetchDataRecipe(10);
