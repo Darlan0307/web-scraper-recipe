@@ -4,6 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "chrome-install": "npx puppeteer browsers install chrome",
     "dev": "node api/index.js",
     "start": "node api/index.js"
   },
